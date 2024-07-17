@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+input,
+textarea,
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+ 
+  --bg-color: #ffffff;
+  --text-color: #323238;
+  --text-color-active: #e75529;
+  
+  --primary-color: #323238;
+  --button-secundary: #02799D;4;
+  
+  --controls-color: #323238;
+  
+  --controls-bg-color: #E1E1E6;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: Opx;
+  border: 0;
+  appearance: none;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--bg-color);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+html.floresta {
+  --bg-color: #3cbb3c;
+  --text-color: #ffffff;
+  --text-color-active: #145814;
+ 
+  --primary-color: #145814;
+  --controls-color:#3cbb3c;
+  --controls-bg-color:#8bf38b;
+  --controls-bg-color-active: #145814;
+}
+html.chuva {
+  --bg-color: #27b6e2;
+  --text-color: #ffffff;
+  --text-color-active: #02799D;
+ 
+  --primary-color: #02799D;
+  --controls-color:#27b6e2;
+  --controls-bg-color:#afe7f8;
+  --controls-bg-color-active: #02799D;
+}
+
+html.cafeteria {
+  --bg-color: #f3b9c3;
+  --text-color: #ffffff;
+  --text-color-active: #c7455d;
+ 
+  --primary-color: #ee7d90;
+  --controls-color:#f3b9c3;
+  --controls-bg-color:#ee7d90;
+  --controls-bg-color-active: #c7455d;
+}
+
+html.lareira {
+  --bg-color: #c74e15;
+  --text-color: #ffffff;
+  --text-color-active: #9b380a;
+ 
+  --primary-color: #e68404;
+  --controls-color:#c74e15;
+  --controls-bg-color:#f87538;
+  --controls-bg-color-active: #852f07;
+}
+
+html.running .ph-play-circle,  
+html.running .ph-plus-circle, 
+html.running .ph-minus-circle, 
+html:not(.running) .ph-pause-circle {
+   display:none;
+}
+
+
+
+button{
+    background:  transparent;
+    border:0;
+    cursor:pointer;
+    color:var(--primary-color);
+    font-size: 6rem;
+}
+
+.secundary{
+    color:var(--button-secundary);
+}
+
+
+
+.page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page .timer-wrapper {
+  width: 82rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page .timer-wrapper .timer-controls-wrapper{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.page .timer-wrapper .timer-controls-wrapper .timer{
+  font-size: 13rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+ 
+}
+
+.page .timer-wrapper .timer-controls-wrapper .timer span:nth-child(2){
+  font-size: 8rem;
+  font-weight: 800;
+  margin: 0rem 0rem 1rem;
+  line-height: 0;
+  
+ 
+}
+
+.page .timer-wrapper .timer-controls-wrapper .controls{
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+.page .timer-wrapper .timer-controls-wrapper .controls button{
+  color:var(--text-color);
+  transition: color .3s;
+}
+
+.page .timer-wrapper .timer-controls-wrapper .controls button:hover{
+  color:var(--text-color-active);
+}
+
+.page .timer-wrapper .timer-controls-wrapper .controls button.active{
+  color:var(--text-color-active);
+}
+
+.page .timer-wrapper .button-wrapper {
+  display: flex;
+  width:31rem;
+  flex-wrap: wrap;
+  gap:3rem;
+}
+
+.page .timer-wrapper .button-wrapper .toggle-mode{
+  display: flex;
+  height:15rem;
+  width:14rem;
+  justify-content: center;
+  align-items: center;
+  background: var(--controls-bg-color);
+  color:var(--controls-color);
+  border-radius:2.4rem;
+  transition: background .3s;
+}
+.page .timer-wrapper .button-wrapper .toggle-mode.active{
+ 
+  background: var(--controls-bg-color-active);
+  color:var(--controls-color);
+ 
+}
+
+
+.page .timer-wrapper .button-wrapper .toggle-mode.theme-tree:hover{
+    color: #3cbb3c;
+  background: #145814;
+  
+}
+.page .timer-wrapper .button-wrapper .toggle-mode:nth-child(2):hover{
+ 
+  color: #27b6e2;
+  background: #02799D;
+  
+}
+.page .timer-wrapper .button-wrapper .toggle-mode:nth-child(3):hover{
+  color: #f3b9c3;
+  background: #c7455d;
+  
+}
+.page .timer-wrapper .button-wrapper .toggle-mode:nth-child(4):hover{
+  color: #c74e15;
+  background: #852f07;
+  
+}
+
